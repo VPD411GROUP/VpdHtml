@@ -1,47 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="'ru">
-    <head>
-        <meta charset="UTF-8" >
-        <title>Калькулятор</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <div class="calculator">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-wrapper">
+      <div class="calculator">
         <!-- Экран -->
-         <div class="display" id="display">0</div>
+        <div class="display" id="display">0</div>
 
         <!-- Кнопки -->
-         <div class="buttons">
+        <div class="buttons">
+          <button class="btn gray clear">AC</button>
+          <button class="btn gray">±</button>
+          <button class="btn gray">%</button>
+          <button class="btn orange operator" data-op="/">÷</button>
 
-            <button class="btn gray clear">AC</button>
-            <button class="btn gray">±</button>
-            <button class="btn gray">%</button>
-            <button class="btn orange operator" data-op="/">÷</button>
+          <button class="btn" data-number="7">7</button>
+          <button class="btn" data-number="8">8</button>
+          <button class="btn" data-number="9">9</button>
+          <button class="btn orange operator" data-op="*">×</button>
 
-            <button class="btn" data-number="7">7</button>
-            <button class="btn" data-number="8">8</button>
-            <button class="btn" data-number="9">9</button>
-            <button class="btn orange operator" data-op="*">×</button>
+          <button class="btn" data-number="4">4</button>
+          <button class="btn" data-number="5">5</button>
+          <button class="btn" data-number="6">6</button>
+          <button class="btn orange operator" data-op="-">-</button>
 
-            <button class="btn" data-number="4">4</button>
-            <button class="btn" data-number="5">5</button>
-            <button class="btn" data-number="6">6</button>
-            <button class="btn orange operator" data-op="-">-</button>
+          <button class="btn" data-number="1">1</button>
+          <button class="btn" data-number="2">2</button>
+          <button class="btn" data-number="3">3</button>
+          <button class="btn orange operator" data-op="+">+</button>
 
-            <button class="btn" data-number="1">1</button>
-            <button class="btn" data-number="2">2</button>
-            <button class="btn" data-number="3">3</button>
-            <button class="btn orange operator" data-op="+">+</button>
+          <button class="btn zero" data-number="0">0</button>
+          <button class="btn" data-number=".">.</button>
+          <button class="btn equal">=</button>
+        </div>
+      </div>
 
-            <button class="btn zero" data-number="0">0</button>
-            <button class="btn" data-number=".">.</button>
-            <button class="btn equal">=</button>
+      <div class="history">
+        <h3>История</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
 
-         </div>
-
-         </div>
-
-         <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
