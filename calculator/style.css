@@ -1,43 +1,60 @@
 body {
-    background: #1e1e1e;
+    background: #3f3f3f;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .calculator {
-    background: #2b2b2b;
+    height: 500px;
+    width: 300px;
+    background-color: #222;
     padding: 20px;
-    border-radius: 20px;
-    width: 260px;
+    border-radius: 50px;
 }
 
 .display {
-    background: black;
-    color: #00ff9d;
-    font-size: 32px;
+    color: white;
+    font-size: 60px;
     text-align: right;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 12px;
 }
 
 .btn {
-    padding: 15px;
-    font-size: 18px;
+    height: 65px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    background: #333;
     cursor: pointer;
 }
 
-.operator {background: #ff9800;}
-.equal {background: #4caf50;}
-.clear{ background: #f44336;}
+.gray {
+    background: #a5a5a5;
+    color: black;
+}
+
+.orange {
+    background: #ff9f0a;
+}
+
+.equal {
+    background: #ff9f0a;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 40px;
+    text-align: left;
+    padding-left: 25px;
+}
