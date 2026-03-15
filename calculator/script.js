@@ -47,6 +47,19 @@ function updateDisplay(value) {
     else{
         display.textContent = value
     }
+
+    // получаем длину числа
+    const length = display.textContent.length
+
+    if (length < 7){
+        display.style.fontSize = "60px"
+    }
+    else if(length < 10){
+        display.style.fontSize = "45px"
+    }
+    else{
+        display.style.fontSize = "35px"
+    }
 }
 
 // ===============

@@ -21,6 +21,8 @@ body {
     text-align: right;
     padding: 20px;
     overflow: hidden;
+    height: 90px;
+    line-height: 90px;
 }
 
 .buttons {
@@ -38,6 +40,16 @@ body {
     background: #333;
     cursor: pointer;
 }
+
+.bth:hover{
+    filter: brightness(1.2);
+}
+
+.btn:active{
+    transform: scale(0.92);
+    opacity: 0.7;
+}
+
 
 .gray {
     background: #a5a5a5;
