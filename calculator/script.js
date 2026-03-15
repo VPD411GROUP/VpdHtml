@@ -167,4 +167,50 @@ clearButton.addEventListener("click", () => {
     updateDisplay("")
 })
 
+// ===============
+// 9. Ввод с клавиатуры
+// ===============
+
+document.addEventListener("keydown", (event) => {
+    const key = event.key
+
+    // цифры
+    if(!isNaN(key) || key === "."){
+        currentNumber += key
+        updateDisplay(currentNumber)
+    }
+
+    // операции
+    if(key === "+" || key === "-" || key === "*" || key === "/"){
+        if(currentNumber === "") return
+        operator = key
+        previousNumber = currentNumber
+        currentNumber = ""
+    }
+
+    // Enter = равно
+    if (key === "Enter" || key === "="){
+        if(currentNumber === "" || previousNumber === "") return
+        const result = calculate()
+        updateDisplay(result)
+        currentNumber = String(result)
+        previousNumber = ""
+        operator = null
+    }
+
+    // Backspace - удаление последнего символа
+    if (key === "Backspace"){
+        currentNumber = currentNumber.slice(0, -1)
+        updateDisplay(currentNumber)
+    }
+
+    // Escape - очистка
+    if (key === "Escape"){
+        currentNumber = ""
+        previousNumber = ""
+        operator = null
+        updateDisplay("")
+    }
+})
+
 
